@@ -1,0 +1,66 @@
+<div class="container">
+
+
+
+    <div class="row">
+        <div class="col-md-2 ">
+            <span style="position: sticky;top: 79px;margin-bottom: 40px;">
+
+                <h3 class="text-center">Rechercher</h3>
+
+                <label for="nom">Nom de categorie</label>
+                <!--    <input  [(ngModel)]="searched"  (ngModelChange)="search()" placeholder="Aa" class="form-control" id="nom" name="nom"  type="text">-->
+                <input [(ngModel)]="searched" placeholder="Aa" class="form-control" id="nom" name="nom" type="text">
+
+                <br>
+
+            </span>
+        </div>
+
+
+        <div class="col-md-10">
+            <h3 class="text-center">Nos Catégorie</h3>
+            <div class="row">
+                <ng-container *ngFor="let x of listProduct">
+                    <div *ngIf="x.name.toLowerCase().includes(searched) || searched== null"
+                        class="col-6 col-sm-4   mb-2 d-flex justify-content-center align-items-center">
+                        <div class="product-item ">
+
+
+
+                            <a href=""><img class="img-fluid" src="{{x.picture}}"
+                                    style="border-radius: 30px;max-height: 300px; height:300px  ; background: none;">
+                            </a>
+
+
+
+
+
+                            <h5 class="mt-2">{{x.name}}</h5>
+                            <h6 class="text-center">
+
+                                <span *ngIf="x.quantity" style="border-radius: 50px;"
+                                    class="defaultCategory  text-end">
+                                    Quantité dispo : {{x.quantity}}
+                                </span> 
+                                <br> <br>
+                                <span class="product-price text-primary  text-center">
+                                    <b> {{x.price}} </b> TND </span>
+
+
+
+
+
+
+                            </h6>
+
+                        </div>
+
+                    </div>
+
+                </ng-container>
+                <!--end for -->
+            </div>
+        </div>
+    </div>
+</div>

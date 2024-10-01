@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+ 
+.outofstock{
+    position: sticky; /* Positionne l'étiquette par rapport au conteneur */
+    top: 10px; /* Positionne l'étiquette à 10 pixels du haut du conteneur */
+    right: 10px; /* Positionne l'étiquette à 10 pixels du bord gauche du conteneur */
+    background-color: rgba(255, 0, 0, 0.603); /* Couleur de fond verte avec une légère transparence */
+    color: white; /* Couleur du texte */
+    padding: 5px 10px; /* Espacement autour du texte */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 14px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    z-index: 10; /* Assure que l'étiquette est au-dessus de l'image */
+    white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+    width: 200px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .leftContainer {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.358);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .leftContainer .like {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .likeCount {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 9, 9);
+    font-weight: 600;
+    position: relative;
+    background-color: white;
+  }
+  
+  .likeCount::before {
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+    left: -4px;
+  }
+  
+  .Btn:hover .leftContainer {
+    background-color: rgb(212, 4, 4);
+  }
+  
+  .Btn:active .leftContainer {
+    background-color: rgb(201, 0, 0);
+  }
+  
+  .Btn:active .leftContainer svg {
+    transform: scale(1.15);
+    transform-origin: top;
+  }
+  
